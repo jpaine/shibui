@@ -16,7 +16,7 @@
 
   <!-- Content -->
   {{ .Content }}
-  {{ partial "date.html" .Date}}
+  <div class="time">{{ partial "date.html" .Date}}</div>
 
   <!-- Comments block -->
   {{ if and .Content (default true (default .Site.Params.comments
