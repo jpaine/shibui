@@ -3,9 +3,6 @@
   "outputDirectory": "public",
   "devCommand": "hugo server -D",
   "installCommand": "echo 'No install needed' || true",
-  "framework": "hugo",
-  "hugo": {
-    "version": "0.120.0"
-  }
+  "framework": "hugo"
 }
 
