@@ -1,8 +1,8 @@
 {
-  "buildCommand": "hugo --gc --minify",
+  "buildCommand": "./build.sh",
   "outputDirectory": "public",
   "devCommand": "hugo server -D",
-  "installCommand": "echo 'No install needed' || true",
+  "installCommand": "echo 'Hugo will be downloaded during build'",
   "framework": "hugo"
 }
 
