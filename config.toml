@@ -1,6 +1,7 @@
 baseURL = 'https://your-site.vercel.app/'
 languageCode = 'en-us'
 title = '56Press'
+disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
 [params]
   author = "Your Name"
@@ -34,9 +35,6 @@ title = '56Press'
 
 [build]
   writeStats = true
-
-# Disable RSS and taxonomy pages since we don't need them for a landing page
-disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
 [frontmatter]
   date = ['date', 'publishDate', 'lastmod']
