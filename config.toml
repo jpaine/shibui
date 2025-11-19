@@ -3,6 +3,11 @@ languageCode = 'en-us'
 title = '56Press'
 theme = "shibui"
 
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.120.0"
+
 [params]
   author = "Your Name"
   email = "your.email@example.com"
