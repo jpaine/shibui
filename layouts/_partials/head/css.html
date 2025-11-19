@@ -1,19 +1,25 @@
-{{- with resources.Get "css/main.css" }}
+{{- $mainCSS := resources.Get "css/main.css" -}}
+{{- if $mainCSS -}}
   {{- if hugo.IsDevelopment }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
+    <link rel="stylesheet" href="{{ $mainCSS.RelPermalink }}">
   {{- else }}
-    {{- with . | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-    {{- end }}
+    {{- $mainCSS = $mainCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $mainCSS.RelPermalink }}" integrity="{{ $mainCSS.Data.Integrity }}" crossorigin="anonymous">
   {{- end }}
-{{- end }}
+{{- else -}}
+  {{- /* Fallback: try static path */ -}}
+  <link rel="stylesheet" href="/assets/css/main.css">
+{{- end -}}
 
-{{- with resources.Get "css/custom.css" }}
+{{- $customCSS := resources.Get "css/custom.css" -}}
+{{- if $customCSS -}}
   {{- if hugo.IsDevelopment }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
+    <link rel="stylesheet" href="{{ $customCSS.RelPermalink }}">
   {{- else }}
-    {{- with . | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-    {{- end }}
+    {{- $customCSS = $customCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $customCSS.RelPermalink }}" integrity="{{ $customCSS.Data.Integrity }}" crossorigin="anonymous">
   {{- end }}
-{{- end }}
+{{- else -}}
+  {{- /* Fallback: try static path */ -}}
+  <link rel="stylesheet" href="/assets/css/custom.css">
+{{- end -}}
