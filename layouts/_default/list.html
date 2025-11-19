@@ -5,7 +5,9 @@
         <ul>
             {{ range .Pages }}
             <li>
-                <span>{{- partial "date" .Date -}}</span>
+                {{ if templates.Exists "partials/date.html" }}
+                    <span>{{- partial "date" .Date -}}</span>
+                {{ end }}
                 <div><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></div>
             </li>
             {{ end }}

@@ -1,6 +1,8 @@
 {{ define "main" }}
   <h1>{{ .Title }}</h1>
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+  {{ if templates.Exists "partials/terms.html" }}
+    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+  {{ end }}
 
   {{/* Table of Contents */}}
   {{ $hasToC := .Params.toc | default true }}
@@ -16,11 +18,15 @@
 
   <!-- Content -->
   {{ .Content }}
-  <div class="time">{{ partial "date.html" .Date}}</div>
+  {{ if templates.Exists "partials/date.html" }}
+    <div class="time">{{ partial "date.html" .Date}}</div>
+  {{ end }}
 
   <!-- Comments block -->
   {{ if and .Content (default true (default .Site.Params.comments .Params.comments)) }}
-    <div class="comments">{{- partial "comments" . -}}</div>
+    {{ if templates.Exists "partials/comments.html" }}
+      <div class="comments">{{- partial "comments" . -}}</div>
+    {{ end }}
   {{ end }}
 
   {{ if not .IsHome }}
