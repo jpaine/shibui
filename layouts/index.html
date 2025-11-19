@@ -1,6 +1,16 @@
 {{ define "main" }}
   {{ .Content }}
   <div class="terminal-nav">
-    {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+    {{- if templates.Exists "partials/menu.html" -}}
+      {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+    {{- else -}}
+      <nav>
+        <ul>
+          {{ range site.Menus.main }}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
+    {{- end -}}
   </div>
 {{ end }}
