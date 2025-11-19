@@ -35,8 +35,8 @@ title = '56Press'
 [build]
   writeStats = true
 
-# Disable RSS since we don't need it for a landing page
-disableKinds = ["RSS"]
+# Disable RSS and taxonomy pages since we don't need them for a landing page
+disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
 [frontmatter]
   date = ['date', 'publishDate', 'lastmod']
