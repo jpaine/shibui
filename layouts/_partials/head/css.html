@@ -1,25 +1,2 @@
-{{- $mainCSS := resources.Get "css/main.css" -}}
-{{- if $mainCSS -}}
-  {{- if hugo.IsDevelopment }}
-    <link rel="stylesheet" href="{{ $mainCSS.RelPermalink }}">
-  {{- else }}
-    {{- $mainCSS = $mainCSS | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $mainCSS.RelPermalink }}" integrity="{{ $mainCSS.Data.Integrity }}" crossorigin="anonymous">
-  {{- end }}
-{{- else -}}
-  {{- /* Fallback: try static path */ -}}
-  <link rel="stylesheet" href="/assets/css/main.css">
-{{- end -}}
-
-{{- $customCSS := resources.Get "css/custom.css" -}}
-{{- if $customCSS -}}
-  {{- if hugo.IsDevelopment }}
-    <link rel="stylesheet" href="{{ $customCSS.RelPermalink }}">
-  {{- else }}
-    {{- $customCSS = $customCSS | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $customCSS.RelPermalink }}" integrity="{{ $customCSS.Data.Integrity }}" crossorigin="anonymous">
-  {{- end }}
-{{- else -}}
-  {{- /* Fallback: try static path */ -}}
-  <link rel="stylesheet" href="/assets/css/custom.css">
-{{- end -}}
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/custom.css">
