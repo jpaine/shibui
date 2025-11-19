@@ -11,13 +11,23 @@
 </head>
 <body>
   <header>
-    {{ partial "header.html" . }}
+    {{- if templates.Exists "partials/header.html" -}}
+      {{ partial "header.html" . }}
+    {{- else -}}
+      <nav class="path-nav">
+        <ol>
+          <li class="current"><a href="/">{{ site.Title }}</a></li>
+        </ol>
+      </nav>
+    {{- end -}}
   </header>
   <main>
     {{ block "main" . }}{{ end }}
   </main>
   <footer>
-    {{ partial "footer.html" . }}
+    {{- if templates.Exists "partials/footer.html" -}}
+      {{ partial "footer.html" . }}
+    {{- end -}}
   </footer>
 </body>
 </html>
