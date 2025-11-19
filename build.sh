@@ -27,6 +27,12 @@ echo ""
 echo "Checking config.toml:"
 cat config.toml | grep -E "theme|baseURL" || echo "Config check failed"
 
+# Verify Hugo can see the partials before building
+echo "Verifying Hugo can find partials..."
+./hugo list all 2>&1 | head -20 || true
+echo ""
+
 # Build the site
+echo "Building site..."
 ./hugo --gc --minify
 
