@@ -35,6 +35,9 @@ title = '56Press'
 [build]
   writeStats = true
 
+# Disable RSS since we don't need it for a landing page
+disableKinds = ["RSS"]
+
 [frontmatter]
   date = ['date', 'publishDate', 'lastmod']
   expiryDate = ['expiryDate']
