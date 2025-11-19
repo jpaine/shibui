@@ -8,6 +8,11 @@ curl -L "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hug
 tar -xzf hugo.tar.gz
 chmod +x hugo
 
+# Verify partials exist before building
+echo "Verifying partials exist..."
+ls -la layouts/_partials/head.html || exit 1
+echo "head.html found ✓"
+
 # Build the site
 ./hugo --gc --minify
 
