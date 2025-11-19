@@ -11,13 +11,17 @@
 </head>
 <body>
   <header>
-    {{ partial "header.html" . }}
+    {{ if templates.Exists "partials/header.html" }}
+      {{ partial "header.html" . }}
+    {{ end }}
   </header>
   <main>
     {{ block "main" . }}{{ end }}
   </main>
   <footer>
-    {{ partial "footer.html" . }}
+    {{ if templates.Exists "partials/footer.html" }}
+      {{ partial "footer.html" . }}
+    {{ end }}
   </footer>
 </body>
 </html>
