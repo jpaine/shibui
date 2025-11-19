@@ -9,10 +9,17 @@ tar -xzf hugo.tar.gz
 chmod +x hugo
 export PATH="$PWD:$PATH"
 
-# Debug: Check theme structure
-echo "Checking theme structure..."
-ls -la themes/shibui/layouts/_partials/ || echo "Theme partials not found"
+# Debug: Check file structure
+echo "Checking layouts structure..."
+echo "Site layouts:"
+ls -la layouts/_partials/ 2>/dev/null || echo "Site partials not found"
+echo ""
+echo "Theme layouts:"
+ls -la themes/shibui/layouts/_partials/ 2>/dev/null || echo "Theme partials not found"
+echo ""
+echo "Checking if head.html exists:"
+find . -name "head.html" -type f 2>/dev/null | head -5
 
-# Build the site with verbose output
-./hugo --gc --minify --verbose
+# Build the site
+./hugo --gc --minify
 
