@@ -1,7 +1,7 @@
 baseURL = 'https://your-site.vercel.app/'
 languageCode = 'en-us'
 title = '56Press'
-theme = "shibui"
+# theme = "shibui"  # Disabled - using site-level layouts instead
 
 [module]
   [module.hugoVersion]
