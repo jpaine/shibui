@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ site.LanguageCode | default "en" }}" dir="ltr">
 <head>
-  {{ partial "head.html" . }}
+  {{ if templates.Exists "partials/head.html" }}
+    {{ partial "head.html" . }}
+  {{ else }}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{{ site.Title }}</title>
+  {{ end }}
 </head>
 <body>
   <header>
