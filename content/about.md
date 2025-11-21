@@ -1,8 +1,7 @@
 ---
 title: "About"
+toc: false
 ---
-
-## About 56Press
 
 56Press is an AI-native book publishing company that uses multimodal AI systems to research and write books. We don't commission books the traditional way. Instead, we deploy systems that traverse knowledge landscapes, identifying patterns and narratives that emerge from vast data sources.
 
