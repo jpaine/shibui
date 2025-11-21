@@ -1,1 +1,8 @@
-/* You can add custom style here */
+/* Custom background color */
+:root {
+  --color-bg-primary: #FFF4D6;
+}
+
+body {
+  background: #FFF4D6;
+}
