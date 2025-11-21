@@ -14,9 +14,9 @@ We work quietly. We publish selectively. The methods remain proprietary, the sys
 
 ---
 
-## How do Get into YCombibator
+## Published Works
 
-### [Author Name]
+### How to Get Into YCombinator
 
 <div style="text-align: center; margin: 3rem 0;">
   <a href="https://www.amazon.com/dp/YOUR-BOOK-ASIN">
