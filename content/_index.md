@@ -19,14 +19,14 @@ We work quietly. We publish selectively. The methods remain proprietary, the sys
 ### How to Get Into YCombinator
 
 <div style="text-align: center; margin: 3rem 0;">
-  <a href="https://www.amazon.com/dp/YOUR-BOOK-ASIN">
+  <a href="https://www.amazon.com/How-Get-Into-YCombinator-Press-ebook/dp/B0G2YGLLLM/">
     <img src="/images/cover_epub.png" alt="Book Cover" style="max-width: 400px; height: auto; box-shadow: 0 8px 16px rgba(0,0,0,0.15);">
   </a>
 </div>
 
-[Book description goes here. This is where you'll describe what the book is about, what makes it unique, and why readers should care. Experience what happens when multimodal AI systems research, synthesize, and write at scale. This isn't a proof of concept—it's the real thing, available now.]
+[What if the patterns that separate successful YC applications from thousands of rejections could be extracted, synthesized, and made visible? This book emerged from that question—not through traditional research across YouTube transcripts, Reddit discussions, Hacker News threads, YC official sources, and founder interviews, identifying the subtle threads that bind successful applications together. The result isn't algorithmic content. It's something else entirely: a framework that feels inevitable, as if the patterns were always there, waiting to be discovered in the intersection of data and insight. Experience what happens when multimodal AI systems research, synthesize, and write at scale. This isn't a proof of concept—it's the real thing, available now.]
 
-**Purchase on [Amazon](https://www.amazon.com/dp/YOUR-BOOK-ASIN)**
+**Purchase on [Amazon](https://www.amazon.com/How-Get-Into-YCombinator-Press-ebook/dp/B0G2YGLLLM/)**
 
 *Available in ebook format. Print edition coming soon.*
 
